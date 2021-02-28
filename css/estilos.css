@@ -1,0 +1,458 @@
+
+.logo-principal {
+    height: 35px;
+    
+}
+
+.btn , .btn-carrito{
+    color: white;
+    border: 1px solid transparent;
+    padding: 0px;
+    border-radius: 3px;
+    font-size: 16px;
+    background-color: #212529;
+    
+}
+#select-departamento{
+    background-color: rgb(226, 221, 221);
+    font-size: 13px;
+    width: 90px;
+    height: 40px;
+    padding: none;
+    margin-top: 0px !important;
+}
+#condiciones{
+    align-content: center;
+}
+
+
+.input-categories {
+    width: 700px;
+    height: 40px;
+    position: inherit;
+}
+
+.btn-nav-search {
+    background-color: #febd69 !important;
+    width: 45px;
+    height: 40px;
+}
+.img-usa {
+    width: 25px;
+    margin-left: 1rem;
+}
+.img-usa:hover,.txt-cuenta-lista:hover, .btn-enviar:hover, .logo-principal:hover, .btn-carrito:hover{
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+
+.txt-cuenta-lista {
+    margin-top: -10px;
+    color: white !important; 
+}
+
+
+.devoluciones-pedidos {
+    margin-left: 1rem;
+}
+
+.txt-devoluciones {
+    color: white;
+
+}
+
+
+.img-shop{
+    width: 25px;
+    margin-left: 1rem;
+}
+.primer-nav{
+    height: 60px;
+}
+/*
+Estilos de la segunda navbar
+*/
+.segundo-nav {
+    background-color: #232f3e !important;
+    height: 45px;
+   
+}
+
+.boton-burger {
+    color: white;
+    font-size: 20px;
+    margin-left: -5px;
+}
+.modal-menu-izquierdo {
+    margin: 0px;
+    
+}
+.contenido-modal-menu-izquierdo {
+    border-radius: 0px;
+    width: 70%;
+    height: 100%!important;
+    margin-bottom: 0px;
+}
+
+.encabezado-modal-menu-izquierdo {
+    background-color: #232f3e !important;
+}
+.titulo-modal-menu-izquierdo{
+    color: white !important;
+    margin-left: 10px;
+
+}
+
+.user-modal {
+    font-size: 35px;
+    color: white;
+    
+}
+.titulo-item-modal-menu-izquierdo{
+    padding-bottom: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #111;
+    text-transform: capitalize;
+    display: inline-block;
+
+}
+.txt-item-modal-menu-izquierdo{
+    font-family: inherit;
+    font-size: 12px !important;
+}
+
+.item-interno {
+    cursor: pointer;
+    height: 50px;
+}
+.item-interno :hover {
+    cursor: pointer;
+    background-color: rgb(211, 208, 208);
+}
+.nav-item-todo-enlaces-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.fa, .fab, .fad, .fal, .far, .fas{
+    cursor: pointer;
+}
+
+ .nav-item a{
+    color: white;
+    border: 1px solid transparent;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 13px;
+
+}
+.nav-item a:hover{
+    border: 1px solid rgba(255, 255, 255, .5);
+    
+}
+
+.item-nav-dos {
+    margin-left: 10px;
+}
+.click-here {
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    position: inherit;
+}
+#tarjeta{
+    font-size: 5px;
+    padding: 0px;
+    border: 0px;
+}
+
+.col{
+    font-size: 15px;
+}
+input[type="image" i]{
+    width:100px;
+        
+}
+.logo .col-4{
+    margin-left: 550px;
+    margin-right: 550px;
+}
+.a-botoninicio, .a-botoninicio {
+    background-position: -5px -130px;
+    height: 31px;
+    width: 103px;
+}
+#login{
+    background-color: white;
+    width: 348px;
+    color:black;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #CCC;
+    border-radius: 8px;
+    
+}
+h1 {
+    font-weight: 400px;
+    font-size: 28px;
+    line-height: 1.2px;
+}
+
+.continuar{
+    background-color: #f0c14b;
+    border-color: #a88734 #9c7e31 #846a29;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 27px;
+    position: absolute;
+    cursor: pointer;
+    margin-right: 20px;
+    width: 282px;
+    border-radius: 5px;
+    
+}
+#email, #nombre, #correo,#contraseña,#contraseña1{
+    border-radius: 5px;
+    margin-right: 20px;
+    width: 274px;
+    background-color: rgb(204, 236, 247);
+    line-height: 27px;
+
+}
+
+#dropdownMenu2{
+    background-color: white;
+    color: black;
+}
+#section, #login{
+    padding: 20px;
+}
+h5{
+    line-height: 1;
+    font-size: 13px;
+    font-family: Arial,  sans-serif;
+    color: #767676;
+    font-weight: 300;
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    padding: 0px 8px 20px 530px;
+}
+.a-divider.a-divider-break:after{
+    content: "";
+    width: 100%;
+    background-color: transparent;
+    display:-ms-inline-flexbox;
+    height: 1px;
+    border-top: 1px solid #e7e7e7;
+    position: absolute;
+    top: 90%;
+    margin-top: -1px;
+    z-index: 1;
+}
+#crear{
+    font-size: 13px;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 27px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    width: 282px;
+    border-radius: 5px;
+    background-color: #817777 ;
+    border-color: #767676;
+    
+
+}
+#modal-Envios{
+    line-height: 1;
+    font-size: 13px;
+    font-family: Arial,  sans-serif;
+    color: #767676;
+    font-weight: 200;
+    position:absolute;
+    display: inline-block;
+    background-color: #fff;
+    padding: 0px 20px 8px 2px;
+}
+#ModalEnvioLabel{
+    color: rgb(63, 62, 62);
+    
+}
+#modal-content-envio{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+
+#modal-body{ /*para estar modificando el tamaño del recuadro del modal*/
+    width: 300px;
+    height: 298px;
+}
+#boton-envio{
+
+    color: black !important;
+    background-color: #f1c65d;
+    border: .5px solid #757575 !important; 
+    border-color: #a88734 #9c7e31 #846a29;
+    border-radius: 5px;
+    font-size: 13px;
+    height: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+    width: 282px;
+}
+
+#codigo-postal{
+    width: 200px;
+}
+#btn-listo{
+    background-color: #f0c14b;
+    border: .5px solid #757575 !important; 
+    border-color: #a88734 #9c7e31 #846a29;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-right: 20px;
+    height: 30px;
+    
+
+}
+
+/*Para estilos del footer*/
+ a #btn-footer{
+    height: 10px;
+    padding: 0px;
+    font-size: 13px;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+  
+}
+.pt-5 {
+    padding-top: 1rem!important;
+}
+#select-idioma-nav{ background-color: #212529;
+    color: white;
+
+}
+#select-idioma{
+    background-color: #232f3e;
+    color: white;
+    font-family: Arial,  sans-serif;
+    
+}
+#btn-dolar{
+    border-radius: 5px;
+    background-color: #232f3e;
+    color: white;
+    border-color: white;
+    line-height: 27px;
+    position: absolute;
+    font-family: Arial,  sans-serif;
+    
+
+}
+#footer-titulos {
+    color: white;
+    background-color: #232f3e;
+    font-size: 14px;
+}
+#titulos{
+    font-size: 16px;
+    font-family: inherit;
+
+}
+
+.titulo-ubicacion{
+    color: black !important;
+    font-weight: bold;
+    font-size: 16px  !important;
+}
+
+.btn-aplicar{
+    background-color: rgba(211, 211, 211, 0.863) !important;
+    color: black !important;
+    border: .5px solid #757575 !important; 
+    width: 80px !important;
+    border-radius: 5px;
+    font-size: 13px;
+    height: 30px;   
+}
+.btn-aplicar :hover{
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50; 
+}
+
+.btn-crear {
+    background-color: rgba(211, 211, 211, 0.863) !important;
+    color: black !important;
+    border: .5px solid #757575 !important; 
+    
+    border-radius: 5px;
+    font-size: 13px;
+    height: 30px;  
+    width: 100%;
+}
+
+.contenedor-identificate {
+    text-align: center;
+    background-color: white;
+    width: 348px;
+    color:black;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 900;
+
+}
+
+.txt-footer-identificate {
+    color: rgb(0, 0, 112) !important;
+    margin-left: 1rem;
+}
+.txt-footer-marca {
+    line-height: 1;
+    font-size: 13px;
+    font-family: Arial,  sans-serif;
+    color: #767676;
+    font-weight: 200;
+    background-color: #fff;
+  
+}
+
+
+
+
+
+
+/* Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { }
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { }
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { }
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { }
