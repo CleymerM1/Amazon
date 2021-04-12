@@ -1,0 +1,80 @@
+[
+    {
+        "idUsuario":1,
+        "nombre":"Cleymer",
+        "apellido":"Mendoza",
+        "nombreUsuario": "CleyV",
+        "correoE": "cleymendo01@gmail.com",
+        "contraseña":"U1Pl5AYJn0Smn6YMQGfYFB0wXTtxZszvAyLEGOxC2zI",
+
+        "ordenes":[
+            {
+                "nombreProducto": "Acer Aspire 5 Slim Laptop",
+                "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+                "cantidad":2,
+                "precio": 8916.94
+            },
+            {
+                "nombreProducto": "Pro Matte Setting Spray",
+                "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+                "cantidad":4,
+                "precio": 234.53
+            }
+        ]
+    },
+    {
+        "idUsuario":2,
+        "nombre":"Keylin",
+        "apellido":"Velasquez",
+        "nombreUsuario": "KeyMen",
+        "correoE": "Keyvel15@gmail.com",
+        "contraseña":"tTsD9LQtk89LdFS4LXfM+EwP3X0o0zYk8hUUawmibSUnQwf7ORpNvNrzI9/BYaMhWvVIgz2+E5G1Whbga0BKmLTGhFVJHKWlhnAsfxhrgPY",
+        "ordenes":[
+            {
+                "nombreProducto": "Jasmine Eyeshadow Palette",
+                "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+                "cantidad":1,
+                "precio": 269.47
+            },
+            {
+                "nombreProducto": "Baby Cotton HeadBand",
+                "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+                "cantidad":7,
+                "precio": 189.83
+            },
+            {
+                "nombreProducto": "Gerber Baby Girls'2 Packs Leggings",
+                "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+                "cantidad":3,
+                "precio": 244.06
+            }
+        ]
+    },
+    {
+        "idUsuario":3,
+        "nombre":"Gabriel",
+        "apellido":"Romero",
+        "nombreUsuario": "Gabo07",
+        "correoE": "gabor07@gmail.com",
+        "contraseña":"YcIbjWOJuOx3cG4WUpnqW3WhwHVqZGevp4hRnAWUW0QHTNGuibihQC7VIjd5WImKhC7xoOCBhDWkeuZbyo7md4wfQWO96/eZAQvNaKpu8g6weUUW76dyUevjIDd9v0T8X6KpiqVckB7YQfQFql8WG1dUpCph2xB2bKqhjibIldqQBqXmk1fgyscd0It68wKo", 
+        "ordenes":[
+            {
+                "nombreProducto": "Playstation DualSense Wireless Controller",
+                "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+                "cantidad":1,
+                "precio": 1709.66
+            },
+            {
+                "nombreProducto": "HP Envy 2019",
+                "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+                "cantidad":2,
+                "precio": 32735.36
+            },{
+                "nombreProducto": "Sandard Liga Shorts",
+                "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+                "cantidad":2,
+                "precio": 586.34
+            }
+        ]
+    }
+]

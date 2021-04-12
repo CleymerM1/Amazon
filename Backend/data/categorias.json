@@ -1,0 +1,37 @@
+[
+    {
+        "nombreCategoria":"Electrónicos",
+        "descripcion":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "color":"#9CD0FA",
+        "imagen":"img/electronicos.jpg",
+        "empresas":[1,2,3]
+    },
+    {
+        "nombreCategoria":"Ropa",
+        "descripcion":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "color":"#FFA8AA",
+        "imagen":"img/estilo4.jpg",
+        "empresas":[4,5,6]
+    },
+    {
+        "nombreCategoria":"Bebés",
+        "descripcion":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "color":"#D3B7F3",
+        "imagen":"img/comprascategorias.jpg",
+        "empresas":[7,8,9]
+    },
+    {
+        "nombreCategoria":"VideoJuegos",
+        "descripcion":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "color":"#0AD1AE",
+        "imagen":"img/masVendido8.jpg",
+        "empresas":[10,11,12]
+    },
+    {
+        "nombreCategoria":"Maquillaje",
+        "descripcion":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "color":"#F4845E",
+        "imagen":"img/belleza.jpg",
+        "empresas":[13,14,15]
+    }
+]
