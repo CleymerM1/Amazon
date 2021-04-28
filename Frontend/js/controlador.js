@@ -1,4 +1,32 @@
 
+this.usuarioSeleccionado = null;
+var idUsuario = readCookie("idUsuario");
+var inicioSesion = false;
+if(idUsuario){
+    this.inicioSesion = true;
+    
+}else{
+    console.log("No");
+}
+
+function readCookie(nombre) {
+
+    var nombreEQ = nombre + "="; 
+    var ca = document.cookie.split(';');
+  
+    for(var i=0;i < ca.length;i++) {
+  
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nombreEQ) == 0) {
+        return decodeURIComponent( c.substring(nombreEQ.length,c.length) );
+      }
+  
+    }
+  
+    return null;
+  
+  }
 
 function desplegarAyuda(accion){
     if(accion == 'desplegar'){
@@ -48,227 +76,59 @@ function desplegarAyuda(accion){
     }
 }
 
-function pintandoCategorias () {
-    document.getElementById("categorias").innerHTML ="";
-    console.log("Se generararan las categorias de los productos que quieras comprar");
+// iniciar sesión
+
+function login(){
+    let datos = {
+        correo : document.getElementById("email").value,
+        contrasenia: document.getElementById("contraseña").value
+    }
     axios({
-        method: 'GET',
-        url: `../../backend/api/usuario.php?getcategorias=true&idUsuario=${idUsuario}`,
-        responseType: 'json'
+        method: 'post',
+        url: `../../backend/api/login.php`,
+        responseType: 'json',
+        data: datos
     }).then(res=>{
-        categorias = res.data;
-        document.getElementById('contenedor-categorias').innerHTML = ``;
-    for(let i=0;i<categorias.length;i++) {
-        document.getElementById('contenedor-categorias').innerHTML += `
-        <div class="col-lg-3 col-md-4 col-sm-6 mt-2">
-            <div class="card-item card" style="background: ${categorias[i].color};" onclick="infoCategorias(${ i })">
-                
-                </div>
-                <div class="row m-3 mt-4">
-                    <section class="col">
-                        <h3 class="text-white font-weight-bolder">${categorias[i].nombreCategoria}</h3>
-                        <p class="text-white" style="font-size: 13px;">
-                            ${categorias[i].empresas.length}
-                        </p>
-                    </section>
-                </div>
+
+        if(res.data){
+            console.log("Inicio de sesión correcto");
+            
+            window.location.href = "compras.php";
+        }else{
+            document.getElementById("mensaje-login").innerHTML = `
+            <div  style="display: block;" class="alert alert-danger" role="alert">
+                ¡Error!, correo o contraseña incorrectos
             </div>
-        </div>
-        `;
-      }
-    })
-pintandoCategorias();
-
-// Generando Usuarios 
-function listaUsuarios() { 
-    document.getElementById('Identificate').innerHTML = '';
-    for (let i=0;i<usuarios.length;i++) {
-        document.getElementById('Identificate').innerHTML += 
-        `<option value="${ i }">${ usuarios[i].nombre } ${ usuarios[i].apellido }</option>`;
-    }
-}
-
-listaUsuarios();
-
-// Onchange para seleccionar un usuario
-function cambiarUsuario () {
-    let usuarioSeleccionado = document.querySelector('#Identificate').value;
-    document.getElementById('texto-hola').innerHTML = `¡Hola ${usuarios[usuarioSeleccionado].nombre}!`;
-    return usuarioSeleccionado;
-}
-
-// Ver Ordenes de un usuario con el boton de ver ordenes
-function verOrdenes() {
-    let usuario = cambiarUsuario();
-    console.log(usuario);
-    // Header Modal
-    document.querySelector('#modalUserLabel').innerHTML = `${usuarios[usuario].nombre} , Estas Son Tus Ordenes.`;
-    // Zona de Productos
-    console.log(usuarios[usuario].ordenes.length);
-    document.querySelector('#zona-productos').innerHTML = '';
-    for(let i=0;i<usuarios[usuario].ordenes.length;i++) {
-        document.querySelector('#zona-productos').innerHTML += `
-            <p>
-                <h3 style="color: #563D7C; font-weight: bold;">${ usuarios[usuario].ordenes[i].nombreProducto }</h3>
-            </p>
-            <p style="font-size: 18px;">
-                ${usuarios[usuario].ordenes[i].descripcion}
-            </p>
-            <p class="ml-auto">
-                <b style="font-size: 25px">$${usuarios[usuario].ordenes[i].precio}</b>
-            </p>
-            <hr>
-        `;
-    }
-}
-
-// Ver info sobre categorias
-function infoCategorias(idCategoria) {
-    document.getElementById('zona-categorias').innerHTML = ``;
-    $('#modalCategorias').modal('show');
-        //console.log(categorias[idCategoria].nombreCategoria);
-        document.getElementById('header-categorias').innerHTML = `${ categorias[idCategoria].nombreCategoria }`;
-        
-        for(let i=0;i<categorias[idCategoria].empresas.length;i++) {
-            const productosPintar = categorias[idCategoria].empresas[i];
-            let productos = '';
-            for(let j=0;j<productosPintar.productos.length;j++) {
-                productos += `
-                    <div class="row p-2">
-                        <div class="col-lg-7">
-                            <h4 style="color:#563D7C;">${ productosPintar.productos[j].nombreProducto }</h4>
-                        </div>
-                        <div class="col-lg-5">
-                            <input type="button" class="btn btn-secondary" onclick="pedir(${ idCategoria } , ${ i } ,${ j })" value="Pedir">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <p>${ productosPintar.productos[j].descripcion }</p>
-                        </div>
-                        <div class="col-lg-4 ml-auto">
-                            <b>$ ${ productosPintar.productos[j].precio }</b>
-                        </div>
-                    </div>
-                    
-                `;
-            }
-            document.getElementById('zona-categorias').innerHTML += `
-                <div class="col-lg-6 col-sm-12 mt-2">
-                    <div class="card" style="border-radius:12px">
-                        <section>
-                            <img src="img/banner.jpg" class="img-fluid" style="border-radius: 12px"/>
-                            <h3 style="color: #fff; font-weight:bolder;">${ categorias[idCategoria].empresas[i].nombreEmpresa }</h3>
-                        </section>
-                        <section class="p-3">
-                            ${ productos }
-                        </section>
-                    </div>
-                </div>
-            `;
+            `
         }
-};
 
-// Funcion para pedir orden a los usuarios
-function pedir (idCategoria , idEmpresa , idProducto) {
-    console.log(idEmpresa)
-    console.log(idProducto)
-    $('#modalPedidos').modal('show');
+    }).catch(error=>{
+        console.error(error); 
+    });
 
-    var nombreProduct = categorias[idCategoria].empresas[idEmpresa].productos[idProducto].nombreProducto;
-    var description = categorias[idCategoria].empresas[idEmpresa].productos[idProducto].descripcion;
-    var valor = categorias[idCategoria].empresas[idEmpresa].productos[idProducto].precio;
-    document.getElementById('zona-pedidos').innerHTML =`
-        <h3>${ categorias[idCategoria].empresas[idEmpresa].productos[idProducto].nombreProducto }</h3><br>
-        <p>${ categorias[idCategoria].empresas[idEmpresa].productos[idProducto].descripcion }</p><br>
-        <div class="row">
-            <div class="col-lg-4">
-                Cantidad A Solicitar : 
-            </div>
-            <div class="col-lg-8">
-                <input type="text" class="form-control" id="txt-cantidad" />    
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-10 mr-auto">
-                
-            </div>
-            <div class="col-lg-2"><br>
-            <b>$ ${ categorias[idCategoria].empresas[idEmpresa].productos[idProducto].precio }</b>
-            </div>
-        </div>
-        <div class="modal-footer">
-            <button type="button" onclick="agregarPedido('${nombreProduct}','${description}',${valor})" 
-            class="btn btn-secondary">
-            Procesar Orden</button>
-        </div>
-    `;
 }
-
-// Funcion para agregar un producto nuevo a un usuario 
-function agregarPedido(nombreProduct,description,valor) {
-    let cantidad = document.getElementById('txt-cantidad').value;
-    console.log(cantidad);
-    console.log(nombreProduct);
-    console.log(description);
-    console.log(valor);
-    let usuario = cambiarUsuario();
-    console.log(usuario);
-
-    let orden =
-        {
-            nombreProducto:nombreProduct,
-            descripcion: description,
-            cantidad: cantidad,
-            precio: valor
-        };
-    usuarios[usuario].ordenes.push(orden);
-    pintandoCategorias();
-    listaUsuarios();
-    $('#modalPedidos').modal('hide');
-    $('#modalCategorias').modal('hide');
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 
 /*
+  axios({
+    method: 'GET',
+    url: url,
+    responseType: 'json'
+  }).then(res=>{
+      console.log(res.data);
+      this.usuarios = res.data;
+      llenarTabla();
+  }).catch(error=>{ 
+      console.error(error);
+  });
+*/
 
-function validarCampoVacio(id){
-    let campo = document.getElementById(id);
 
-    if(campo.value== '') {
-        campo.classList.remove('input-success');
-        campo.classList.add('input-error');
-    
-    }else{
-        campo.classList.remove('input-error');
-        campo.classList.add('input-success');
-    }
-}
 
-function validarCorreo(campo) {
-    console.log(campo.value);
-    const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if(regex.test(campo.value)){
-        campo.classList.remove('input-error');
-        campo.classList.add('input-success');
-    }else{
-        campo.classList.remove('input-success');
-        campo.classList.add('input-error');
-    }
-}
+// Onchange para seleccionar un usuario
 
-*/}
+
+

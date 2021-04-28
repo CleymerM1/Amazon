@@ -1,0 +1,531 @@
+[
+    {   
+        "idProducto":1,
+        "idEmpresa":1,
+        "idCategoria":1,
+        "nombreProducto": "Acer Predator Triton 500 PT515-52-73L3 Gaming Laptop",
+        "precio": 37944.71,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/acer_1.jpg"
+    },
+    {   
+        "idProducto":2,
+        "idEmpresa":1,
+        "idCategoria":1,
+        "nombreProducto": "Acer Chromebook ",
+        "precio": 3639.92,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/acer_2.jpg"
+    },
+    {   
+        "idProducto":3,
+        "idEmpresa":1,
+        "idCategoria":1,
+        "nombreProducto": "Acer Spin 5 Convertible Laptop",
+        "precio": 23428.99,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/acer_1.jpg"
+    },
+    {   
+        "idProducto":4,
+        "idEmpresa":2,
+        "idCategoria":1,
+        "nombreProducto": "HP 27 Pavilion All-in-One PC",
+        "precio": 40310.33,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/hp_1.jpg"
+    },
+    {   
+        "idProducto":5,
+        "idEmpresa":2,
+        "idCategoria":1,
+        "nombreProducto": "2020 HP Touchscreen Laptop Computer ",
+        "precio": 14759.29,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/hp_2.jpg"
+    },
+    {   
+        "idProducto":6,
+        "idEmpresa":2,
+        "idCategoria":1,
+        "nombreProducto": "HP laptop Intel Celeron N4020",
+        "precio": 7549.07,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/hp_3.jpg"
+    },
+    {   
+        "idProducto":7,
+        "idEmpresa":2,
+        "idCategoria":1,
+        "nombreProducto": "HP Envy 2019",
+        "precio": 32735.36,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/hp_4.jpg"
+    },
+    {   
+        "idProducto":8,
+        "idEmpresa":3,
+        "idCategoria":1,
+        "nombreProducto": "2020 Apple iPad Pro",
+        "precio": 25161.62,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/aple_1.jpg"
+    },
+    {   
+        "idProducto":9,
+        "idEmpresa":3,
+        "idCategoria":1,
+        "nombreProducto": "New Apple MacBook Pro",
+        "precio": 53379.02,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/aple_2.jpg"
+    },
+    {   
+        "idProducto":10,
+        "idEmpresa":3,
+        "idCategoria":1,
+        "nombreProducto": "Apple iMac 27'' with Retina 5K Display",
+        "precio": 92812.04,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/aple_4.jpg"
+    },
+
+    {
+        
+        "idProducto":11,
+        "idEmpresa":4,
+        "idCategoria":2,
+        "nombreProducto": "6 Pack Runner Socks",
+        "precio": 244.80,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/puma_1.jpg"
+    
+    },
+    {
+        "idProducto":12,
+        "idEmpresa":4,
+        "idCategoria":2,
+        "nombreProducto": "Active Tights",
+        "precio": 705.31,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/pume_2.jpg"
+    },
+    {
+        "idProducto":13,
+        "idEmpresa":4,
+        "idCategoria":2,
+        "nombreProducto": "Sandard Liga Shorts",
+        "precio": 586.34,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/puma_3.jpg"
+    },
+    {
+        "idProducto":14,
+        "idEmpresa":4,
+        "idCategoria":2,
+        "nombreProducto": "Essentials Fleece Sweatpants",
+        "precio": 1098.16,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/puma_4.jpg"
+    },
+    {
+        "idProducto":15,
+        "idEmpresa":5,
+        "idCategoria":2,
+        "nombreProducto": "Cloudfoam Pure Running Shoe",
+        "precio": 1600,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/adidas_1.jpg"
+    },
+    {
+        "idProducto":16,
+        "idEmpresa":5,
+        "idCategoria":2,
+        "nombreProducto": "Adidas Unisex Adissage Slide",
+        "precio": 902.71,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/adidas_2.jpg"
+    },
+    {
+        "idProducto":17,
+        "idEmpresa":5,
+        "idCategoria":2,
+        "nombreProducto": "Grand Court Sneaker",
+        "precio": 1562.58,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/adidas_3.jpg"
+    },
+    {
+        "idProducto":18,
+        "idEmpresa":5,
+        "idCategoria":2,
+        "nombreProducto": "Adidas Solar Glide 3 Runnig Shoe",
+        "precio": 3078.26,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/adidas_4.jpg"
+    },
+
+    {
+        "idProducto":19,
+        "idEmpresa":6,
+        "idCategoria":2,
+        "nombreProducto": "3 Stone Heart Pendant Necklace",
+        "precio": 2442.82,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/amazon_1.jpg"
+    },
+    {
+        "idProducto":20,
+        "idEmpresa":6,
+        "idCategoria":2,
+        "nombreProducto": "Sterling Silver Pressed Flower Teardrop",
+        "precio": 708.49,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/amazon_1.jpg"
+    },
+    {
+        "idProducto":21,
+        "idEmpresa":6,
+        "idCategoria":2,
+        "nombreProducto": "Sterling Silver Diamond Round Stud Earrings",
+        "precio": 4084.80,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/amazon_1.jpg"
+    },
+    {
+        "idProducto":22,
+        "idEmpresa":6,
+        "idCategoria":2,
+        "nombreProducto": "10K Diamond Pendant Necklace, 18'' ",
+        "precio": 4861.70,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/amazon_1.jpg"
+    },
+
+    {
+        "idProducto":23,
+        "idEmpresa":7,
+        "idCategoria":3,
+        "nombreProducto": "Baby Plus Animal Face Robe, Blue Elephant",
+        "precio": 227.21,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/computadora1.jpg"
+    },
+    {
+        "idProducto":24,
+        "idEmpresa":7,
+        "idCategoria":3,
+        "nombreProducto": "Baby Cotton HeadBand",
+        "precio": 189.83,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/computadora1.jpg"
+    },
+    {
+        "idProducto":25,
+        "idEmpresa":7,
+        "idCategoria":3,
+        "nombreProducto": "Baby Cotton Flannel Burp",
+        "precio": 242.84,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/computadora1.jpg"
+    },
+    {
+        "idProducto":26,
+        "idEmpresa":7,
+        "idCategoria":3,
+        "nombreProducto": "Gerber Baby Girls'2 Packs Leggings",
+        "precio": 244.06,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/computadora1.jpg"
+    },
+
+    {
+        "idProducto":27,
+        "idEmpresa":8,
+        "idCategoria":3,
+        "nombreProducto": "Maracas",
+        "precio": 170.77,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/computadora1.jpg"
+    },
+    {
+        "idProducto":28,
+        "idEmpresa":8,
+        "idCategoria":3,
+        "nombreProducto": "Baby First Blocks",
+        "precio": 366.22,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/computadora1.jpg"
+    },
+    {
+        "idProducto":29,
+        "idEmpresa":8,
+        "idCategoria":4,
+        "nombreProducto": "Classic Xylophone",
+        "precio": 390.65,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/juegos_1.jpg"
+    },
+    {
+        "idProducto":30,
+        "idEmpresa":8,
+        "idCategoria":4,
+        "nombreProducto": "Slow Much Fun Stroller Sloth",
+        "precio": 49.99,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/juegos_2.jpg"
+    },
+    {
+        "idProducto":31,
+        "idEmpresa":9,
+        "idCategoria":4,
+        "nombreProducto": "Poppin' Pals Pop-up Activity Toy",
+        "precio": 608.32,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/juegos_3.jpg"
+    },
+    {
+        "idProducto":32,
+        "idEmpresa":9,
+        "idCategoria":4,
+        "nombreProducto": "Chase'n Go Ball Popper Active Toy",
+        "precio": 792.53,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/juegos_4.jpg"
+    },
+    {
+        "idProducto":33,
+        "idEmpresa":9,
+        "idCategoria":4,
+        "nombreProducto": "Stack'n Stow Nesting Cups ",
+        "precio": 222.57,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/juegos_5.jpg"
+    },
+    {
+        "idProducto":34,
+        "idEmpresa":9,
+        "idCategoria":4,
+        "nombreProducto": "Munchkin Fishin' Bath toy",
+        "precio": 188.85,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/juegos_6.jpg"
+    },
+    {
+        "idProducto":35,
+        "idEmpresa":10,
+        "idCategoria":4,
+        "nombreProducto": "Nintendo Switch with Neon Blue and Neon Red Joy-Con-HAC-001(-01=",
+        "precio": 7615.22,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/juegos_6.jpg"
+    },
+    {
+        "idProducto":36,
+        "idEmpresa":10,
+        "idCategoria":4,
+        "nombreProducto": "Super Mario 3D",
+        "precio": 1709.66,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/juegos_6.jpg"
+    },
+    {
+        "idProducto":37,
+        "idEmpresa":10,
+        "idCategoria":4,
+        "nombreProducto": "The Legend Of Zelda",
+        "precio": 49.99,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/juegos_6.jpg"
+    },
+    {
+        "idProducto":38,
+        "idEmpresa":10,
+        "idCategoria":4,
+        "nombreProducto": "Producto 4",
+        "precio": 49.99,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/juegos_6.jpg"
+    },
+    {   
+        "idProducto":39,
+        "idEmpresa":11,
+        "idCategoria":4,
+        "nombreProducto": "Playstation DualSense Wireless Controller",
+        "precio": 1709.66,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/juegos_6.jpg"
+    },
+    {
+        "idProducto":40,
+        "idEmpresa":11,
+        "idCategoria":4,
+        "nombreProducto": "NBA 2K21",
+        "precio": 488.37,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/juegos_6.jpg"
+    },
+    {
+        "idProducto":41,
+        "idEmpresa":11,
+        "idCategoria":4,
+        "nombreProducto": "Demon´s Souls",
+        "precio": 1709.90,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/juegos_6.jpg"
+    },
+    {
+        "idProducto":42,
+        "idEmpresa":11,
+        "idCategoria":4,
+        "nombreProducto": "Marvel Spider-Man",
+        "precio": 1685.71,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/juegos_6.jpg"
+    },
+    {
+        "idProducto":43,
+        "idEmpresa":12,
+        "idCategoria":4,
+        "nombreProducto": "PowerA Enhanced Wired Controller for Xbox",
+        "precio": 854.83,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/juegos_6.jpg"
+    },
+    {
+        "idProducto":44,
+        "idEmpresa":12,
+        "idCategoria":4,
+        "nombreProducto": "Turtle Beach Recon 70 Gaming Headset for Xbox",
+        "precio": 976.00,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/juegos_6.jpg"
+    },
+    {
+        "idProducto":45,
+        "idEmpresa":12,
+        "idCategoria":4,
+        "nombreProducto": "Turtle Beach Recon 200 White Amplified Gaming Headset for Xbox",
+        "precio": 1464.62,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/juegos_6.jpg"
+    },
+    {
+        "idProducto":46,
+        "idEmpresa":12,
+        "idCategoria":4,
+        "nombreProducto": "PDP Gaming Remote Control: Xbox Series X|S, Xbox One",
+        "precio": 488.37,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/juegos_6.jpg"
+    },
+    {
+        "idProducto":47,
+        "idEmpresa":13,
+        "idCategoria":5,
+        "nombreProducto": "Pro Matte Setting Spray",
+        "precio": 234.53,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/computadora1.jpg"
+    },
+    {
+        "idProducto":48,
+        "idEmpresa":13,
+        "idCategoria":5,
+        "nombreProducto": "Banana Setting Powder",
+        "precio": 193.00,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/computadora1.jpg"
+    },
+    {
+        "idProducto":49,
+        "idEmpresa":13,
+        "idCategoria":5,
+        "nombreProducto": "Jasmine Eyeshadow Palette",
+        "precio": 269.47,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/computadora1.jpg"
+    },
+    {
+        "idProducto":50,
+        "idEmpresa":13,
+        "idCategoria":5,
+        "nombreProducto": "Gel Eyebrow",
+        "precio": 148.78,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/computadora1.jpg"
+    },
+    {
+        "idProducto":51,
+        "idEmpresa":14,
+        "idCategoria":5,
+        "nombreProducto": "Lipstick Peach Fuzz",
+        "precio": 350.00,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/computadora1.jpg"
+    },
+    {
+        "idProducto":52,
+        "idEmpresa":14,
+        "idCategoria":5,
+        "nombreProducto": "Infalible Fresh Wear Foundation in Powder",
+        "precio": 561.90,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/computadora1.jpg"
+    },
+    {
+        "idProducto":53,
+        "idEmpresa":14,
+        "idCategoria":5,
+        "nombreProducto": "Infalible Pro Matte Foundation Natural Rose",
+        "precio": 450.00,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/computadora1.jpg"
+    },
+    {
+        "idProducto":54,
+        "idEmpresa":14,
+        "idCategoria":5,
+        "nombreProducto": "True Match Mineral Loose Powder Foundation",
+        "precio": 580.96,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/computadora1.jpg"
+    },
+    {
+        "idProducto":55,
+        "idEmpresa":15,
+        "idCategoria":5,
+        "nombreProducto": "Rapid Wrinkle Repair Retinol Regenerating Anti-Aging Face",
+        "precio": 556.29,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/computadora1.jpg"
+    },
+    {
+        "idProducto":56,
+        "idEmpresa":15,
+        "idCategoria":5,
+        "nombreProducto": "Hydro Boost Hyaluronic",
+        "precio": 389.42,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/computadora1.jpg"
+    },
+    {
+        "idProducto":57,
+        "idEmpresa":15,
+        "idCategoria":5,
+        "nombreProducto": "Makeup Remover Cleansing Face Wipes",
+        "precio": 219.14,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/computadora1.jpg"
+    },
+    {
+        "idProducto":58,
+        "idEmpresa":15,
+        "idCategoria":5,
+        "nombreProducto": "Deep Clean Invorating Foaming Facial Scrub",
+        "precio": 162.22,
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
+        "imagen": "img/productos/computadora1.jpg"
+    }
+
+]

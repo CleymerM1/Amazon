@@ -1,3 +1,17 @@
+<?php
+    session_start();
+    if(!isset($_SESSION["token"])){
+      header("Location: ../index.html");
+    }
+    if(!isset($_COOKIE["token"])){
+      header("Location: ../index.html");
+    }
+    if($_SESSION["token"] != $_COOKIE["token"]){
+      header("Location: ../index.html");
+  
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +19,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/estilos.css">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/all.css">
 
     <title>Amazon: Compras en Línea de Electrónicos, Ropa, Computadoras</title>
 </head>
@@ -16,11 +30,10 @@
 }
 </style>
 <body>
-  <main>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark primer-nav">
       <div class="container-fluid mt-3">
         <a class="navbar-brand" href="#">
-          <img class="logo-principal" src="img/amazon_principal.png" alt="">
+          <img class="logo-principal" src="../img/amazon_principal.png" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -68,7 +81,7 @@
               </li>
               <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <img src="img/united-states.png" class="img-usa" alt="" srcset="">
+                      <img src="../img/united-states.png" class="img-usa" alt="" srcset="">
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="#">Action</a></li>
@@ -80,7 +93,7 @@
               <li class="nav-item">
                   <div class="dropdown">
                     <button class="btn btn-primary my-2 my-sm-0 btn-identificate" type="submit">
-                      <span>&nbsp;&nbsp;<a class="link-identificate" href="html/Identificate.html">Hola,Identificate<br>Cuenta y Lista</a></span>
+                      <span>&nbsp;&nbsp;<a class="link-identificate" href="Identificate.html"><span id="nombre-usuario">Hola,Identificate</span><br>Cuenta y Lista</a></span>
                      
                     </button>
                               
@@ -102,7 +115,7 @@
                 <div class="boton-Carrito  mb-3">
                   
                 <a class="nav-link " href="#" id="navbar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="img/carrito.jpg" class="img-shop" alt="" srcset="">
+                    <img src="../img/carrito.jpg" class="img-shop" alt="" srcset="">
                     <br>
                     <button id="btn-carrito" class="btn-carrito" >Carrito</i></button>
                 </a>
@@ -154,10 +167,93 @@
         </ul>
       
         <span class="nav-item item-nav-dos">
-          <a href="html/compras.html"><b>Click here to shop in English</b></a>
+          <a  href="logout.php"><b>Cerrar sesión</b></a>
         </span>
       </div>
     </nav>
+  <main id="main-compras" class="main-compras">
+      
+        <div class="row" id="tarjetas-compras">
+            <!--Tarjetas principales-->
+            
+
+        </div>
+        <div class="row" id="mas-vendidos">
+          <div class="col-12 my-2">
+            <div style="background-color: white;">
+              <h2 class="titulo-scroll">Nuestros jugeutes favoritos</h2>
+                <ul class="gallery my-2">
+                  
+                </ul>
+            </div>
+          </div>
+            <!--Item 2-->
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <input type="button" value="Iniciar sesión para obtener recomendaciones personalizadas" class="btn-inicio-foot mb-5" >
+            </div>
+        </div>
+     
+  </main>
+
+  <main id="productos-categoria">
+    <div class="container">
+
+      <div class="row" id="contenedor-productos">
+        
+      </div>
+    </div>
+  </main>
+  <main id="productos-detalle">
+    <div class="container">
+      <div class="row" id="contenedor-detalle">
+        <div class="col-12">
+          <div class="row">
+            <div class="col-4">
+              <img class="img-detalle-producto" src="../img/productos/hp_1.jpg" alt="">
+            </div>
+            <div class="col-5">
+              <div class="row">
+                <div class="col-12">
+                  <h4>Titulo del producto</h4>
+                  <span class="marca-detalle">Marca: Marca del producto</span>
+                  <hr>
+                </div>
+                <div class="col-12">
+                  <span>Precio: <span>L.500.00</span> <span>+ L. 77.0 de envio y deposito de derechos de importación</span></span>
+                  <h6>Descripción</h6>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus distinctio, eos nobis atque veniam numquam tempora autem impedit itaque. Harum cumque asperiores quaerat aspernatur iste quisquam unde, ex sed sequi nam consequatur saepe ab assumenda perferendis maxime cum cupiditate.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quod aperiam modi officia? Quidem corrupti eos nulla rerum eaque fugit doloremque tempore repellendus provident esse sit asperiores incidunt ea, dignissimos molestiae commodi et suscipit distinctio vero. Voluptatibus totam repellendus corrupti aperiam vel reiciendis nihil reprehenderit obcaecati alias, temporibus ipsa placeat esse neque porro possimus dolores asperiores sapiente error illum sit eum quisquam! Illum.
+
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-3 border border-light my-4">
+              <div class="row">
+                <div class="col-12 my-4">
+                  <span class="spn-precio">L.500.00</span>
+                </div>
+                <div class="col-12 my-4">
+                  <label for="cantidad">Cantidad</label>
+                  <select name="cantidad" id="cantidad-producto" >
+
+                  </select>
+                </div>
+                <div class="col-12 my-4">
+                  <button class="btn-add-car"><span><img src="../img/carrito.jpg" alt=""></span>Agregar al carrito</button>
+                </div>
+                <div class="col-12 my-4">
+                  <button class="btn-add-list"><span></span>Agregar a la lista</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <!--Modal de menu desplegable-->
@@ -169,7 +265,7 @@
     <div class="modal-content contenido-modal-menu-izquierdo">
       <div class="modal-header encabezado-modal-menu-izquierdo ">
           <i class="fas fa-user-circle user-modal"></i>
-          <a href="html/Identificate.html"><h4 class="modal-title titulo-modal-menu-izquierdo" id="exampleModalLabel" >Hola, identifícate</h4></a>
+          <a href="Identificate.html"><h4 class="modal-title titulo-modal-menu-izquierdo" id="exampleModalLabel" >Hola, identifícate</h4></a>
           <button type="button" class="btn-close"  data-bs-dismiss="modal" aria-label="Close"></button>
           <div class="col-2">
       </div>
@@ -453,37 +549,7 @@
   </div>
 </div>
 </div>
-  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="img/pantalla1.jpg" class="d-block w-100" alt="">
-      </div>
-      <div class="carousel-item">
-        <img src="img/pantalla4.jpg" class="d-block w-100" alt="">
-      </div>
-      <div class="carousel-item">
-        <img src="img/pantalla5.jpg" class="d-block w-100" alt="">
-      </div>
-      <div class="carousel-item">
-        <img src="img/pantalla3.jpg" class="d-block w-100" alt="">
-      </div>
-      <div class="carousel-item">
-        <img src="img/pantalla2.jpg" class="d-block w-100" alt="">
-        
-      </div>
-      
-      
-    </div>
     
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
       
      
   <!--Footer-->
@@ -606,7 +672,7 @@
           <div class="col-3">
             <table>
               <tr>
-                <td><img class="logo-principal" src="img/amazon_principal.png" alt=""></td>
+                <td><img class="logo-principal" src="../img/amazon_principal.png" alt=""></td>
               </tr>
             </table>
           </div>
@@ -662,7 +728,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
-    <script src="js/axios.min.js"></script>
-    <script src="js/controlador.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/controladorcompras.js"></script>
+    <script src="../js/controlador.js"></script>
 </body>
 </html>

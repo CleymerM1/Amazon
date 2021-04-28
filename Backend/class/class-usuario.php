@@ -1,180 +1,207 @@
-<?php 
+<?php
+    class Usuario {
+        private $idUsuario;
+        private $nombre;
+        private $correo;
+        private $contrasenia;
+        private $ordenes;
+        private $carrito;
 
-class usuario{
-                private $idUsuario;
-                private $nombre;
-                private $apellido;
-                private $nombreUsuario;
-                private $correoE;
-                private $contraseña;
-                private $ordenes;
-    
+        public function __construct($nombre, $correo, $contrasenia, $ordenes, $carrito){
+            $this->idUsuario = $this->generarId();
+            $this->nombre = $nombre;
+            $this->correo = $correo;
+            $this->contrasenia = sha1($contrasenia);
+            $this->ordenes = $ordenes;
+            $this->carrito = $carrito; 
+        }
 
+        public function obtenerUsuario($idUsuario){
+            $usuarios = json_decode(file_get_contents("../data/usuarios.json"),true);
+            for ($i=0; $i < sizeof($usuarios) ; $i++) { 
+                if($usuarios[$i]["idUsuario"] == $idUsuario){
+                    return $usuarios[$i];
+                }
+                
+            }
+            return null;
+        }
 
-                        public function __construct($idUsuario, $nombre, $apellido,$nombreUsuario, $correoE,$contraseña, $ordenes){
-                            $this-> idUsuario=$idUsuario;
-                            $this-> nombre= $nombre;
-                            $this-> apellido=$apellido;
-                            $this->nombreUsuario=$nombreUsuario;
-                            $this-> correoE= $correoE;
-                            $this-> contraseña=$contraseña;
-                            $this-> ordenes=$ordenes;
+        public function guardarUsuario(){
 
-                        }
-                        public static function categorias($idUsuario, $idEmpresa){
-                        $usuarioproducto= self::obtenerUsuarioPorId($idUsuario)["ordenes"];
-                        for ($i=0; $i>sizeof($usuarioproducto); $i++){
-                                if($usuarioproducto[$i]==$idEmpresa){
-                                    return true;
-                                }
-                            }
-                            return false;
-                        }
+            if($this->existeUsuario($this->correo)){
+                $mensaje = array(
+                    "estado"=> "error",
+                    "mensaje" => "Ya existe un usuario registrado con este correo"
+                );
+                return $mensaje;
+            }else{
 
-                        public function guardarUsuario(){;
-                                $usuario =array(
+                $usuario = array(
+                    "idUsuario" => $this->idUsuario,
+                    "nombre" => $this->nombre,
+                    "correoE" => $this->correo,
+                    "contrasenia" => $this->contrasenia,
+                    "ordenes" => $this->ordenes,
+                    "carrito"  => $this->carrito
+                );
 
-                                        "idUsuario"=> sizeof(self::obtenerUsuarios()),
-                                        "nombre"=> $this->nombre,
-                                        "apellido"=> $this->apellido,
-                                        "nombreUsuario"=>$this->nombreUsuario,
-                                        "correoE"=>$this->correoE,
-                                        "contraseña"=> $this->contraseña,
-                                        "ordenes"=>$this->ordenes,
-                                );
-                                $usuarios=json_decode(file_get_contents("../data/usuarios.json"),true);
-                                $usuarios[]=$usuario;
-                                $archivo=fopen("../data/usuarios.json", "w");
-                                fwrite($archivo,json_encode($usuarios));
-                                fclose($archivo);
-                                return true;
-                        }     
-                        
-                        public function actualizarUsuario($idUsuario){
-                            $usuario=array(
-                                
-                                "idUsuario"=> $this->idUsuario,
-                                "nombre"=> $this->nombre,
-                                "apellido"=> $this->apellido,
-                                "nombreUsuario"=>$this->nombreUsuario,
-                                "correoE"=>$this->correoE,
-                                "contraseña"=> $this->contraseña,
-                                "ordenes"=>$this->ordenes,
-                            );
-                            $usuarios=json_decode(file_get_contents("../data/usuarios.json"),true);
-                            for($i=0; $i<sizeof($usuarios);$i++){
-                                if($usuarios[$i]["idUsuario"]==$idUsuario){
-                                    $usuarios[$i]=$usuario;
-                                }
-                            }
-                            $archivo=fopen("../data/usuarios.json","w");
-                            fwrite($archivo,json_encode($usuarios));
-                            fclose($archivo);
-                            return true;
-                        }
-                        public static function obtenerUsuarioPorCorreo ($correoE){
-                            $usuarios=json_decode(file_get_contents('../data/usuarios.json'),true);
-                            for($i=0; $i<sizeof($usuarios); $i++){
-                                if($usuarios[$i]["correoE"]==$correoE){
-                                    return $usuarios[$i];
-                                }
-                            }
-                            return null;
-                        }
-                        public static function obtenerUsuarioPorId($idUsuario){
-                            $usuarios=json_decode(file_get_contents('../data/usuarios.json'),true);
-                            for($i=0; $i<sizeof($usuarios); $i++){
-                                if($usuarios[$i]["idUsuario"]==$idUsuario){
-                                    return $usuarios[$i];
-                                }
-                            }
-                            return null;
-                        }
-
-                        public static function ObtenerIndice($idUsuario){
-                            $contenidoArchivo=file_get_contents("../data/usuarios.json");
-                            $usuarios=json_decode($contenidoArchivo,true);
-                            for($i=0; $i<sizeof($usuarios); $i++){
-                                if($usuarios[$i]["idUsuario"]==$idUsuario){
-                                    return $i;
-                                }
-                            }
-                            return null;
-
-                        }
-                        public static function eliminarUsuario($idUsuario){
-                            $indice=self::ObtenerIndice($idUsuario);
-                            if($indice){
-                                $contenidoArchivo=file_get_contents("../data/usuarios.json");
-                                $usuarios=json_decode($contenidoArchivo,true);
-                                array_splice($usuarios,$indice,1);
-                                $archivo=fopen('../data/usuarios.json','w');
-                                fwrite($archivo,json_encode($usuarios));
-                                fclose($archivo);
-                                return true;
-                            }
-                            return false;
-                        }
-                        public static function obtenerUsuarios(){
-                            $usuarios=json_decode(file_get_contents("../data/usuarios.json"),true);
-                            return $usuarios;
-                        }
-                        public function getIdUsuario(){
-                            return $this->idUsuario;
-                        }
-                        public function setIdUsuario($idUsuario){
-                            $this->idUsuario=$idUsuario;
-                            return $this;
-                        }
-                        public function getnombre(){
-                            return $this->nombre;
-                        }
-                        public function setnombre($nombre){
-                            $this->nombre=$nombre;
-                            return $this;
-                        }
-                        public function getapellido(){
-                            return $this->apellido;
-                        }
-                        public function setapellido($apellido){
-                            $this->apellido=$apellido;
-                            return $this;
-                        }
-                        public function getnombreUsuario(){
-                            return $this->nombreUsuario;
-                        }
-                        public function setnombreUsuario($nombreUsuario){
-                            $this->nombreUsuario=$nombreUsuario;
-                            return $this;
-                        }
-                        public function getcorreoE(){
-                            return $this->correoE;
-                        }
-                        public function setcorreoE($correoE){
-                            $this->correoE=$correoE;
-                            return $this;
-                        }
-                        public function getcontraseña(){
-                            return $this->contraseña;
-                        }
-                        public function setcontraseña($contraseña){
-                            $this->contraseña=$contraseña;
-                            return $this;
-                        }
-                        public function getordenes(){
-                            return $this->ordenes;
-                        }
-                        public function setordenes($ordenes){
-                            $this->ordenes=$ordenes;
-                            return $this;
-                        }
-
- 
-
-
-}
+                $usuarios = json_decode(file_get_contents("../data/usuarios.json"),true);
+                $usuarios[] = $usuario;
+                $archivo = fopen("../data/usuarios.json","w");
+                fwrite($archivo, json_encode($usuarios));
+                fclose($archivo);
+                $mensaje = array(
+                    "estado"=> "exito",
+                    "mensaje" => "El usuario ha sido registrado correctamente."
+                );
+                return $mensaje;
+            }
+        }
 
 
 
+        public function existeUsuario($correo){
+            $usuarios = json_decode(file_get_contents("../data/usuarios.json"),true);
+            for ($i=0; $i < sizeof($usuarios) ; $i++) { 
+                if($usuarios[$i]["correoE"] == $correo){
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+        public function generarId(){
+            $usuarios = json_decode(file_get_contents("../data/usuarios.json"),true);
+            if(sizeof($usuarios) == 0){
+                    return 1;
+            }else{
+                    $id = $usuarios[sizeof($usuarios)-1]["idUsuario"] + 1;
+                    return $id;
+            }
+        }
+
+        /**
+         * Get the value of idUsuario
+         */ 
+        public function getIdUsuario()
+        {
+                return $this->idUsuario;
+        }
+
+        /**
+         * Set the value of idUsuario
+         *
+         * @return  self
+         */ 
+        public function setIdUsuario($idUsuario)
+        {
+                $this->idUsuario = $idUsuario;
+
+                return $this;
+        }
+
+        /**
+         * Get the value of nombre
+         */ 
+        public function getNombre()
+        {
+                return $this->nombre;
+        }
+
+        /**
+         * Set the value of nombre
+         *
+         * @return  self
+         */ 
+        public function setNombre($nombre)
+        {
+                $this->nombre = $nombre;
+
+                return $this;
+        }
+
+
+        /**
+         * Get the value of correo
+         */ 
+        public function getCorreo()
+        {
+                return $this->correo;
+        }
+
+        /**
+         * Set the value of correo
+         *
+         * @return  self
+         */ 
+        public function setCorreo($correo)
+        {
+                $this->correo = $correo;
+
+                return $this;
+        }
+
+        /**
+         * Get the value of contrasenia
+         */ 
+        public function getContrasenia()
+        {
+                return $this->contrasenia;
+        }
+
+        /**
+         * Set the value of contrasenia
+         *
+         * @return  self
+         */ 
+        public function setContrasenia($contrasenia)
+        {
+                $this->contrasenia = $contrasenia;
+
+                return $this;
+        }
+
+        /**
+         * Get the value of ordenes
+         */ 
+        public function getOrdenes()
+        {
+                return $this->ordenes;
+        }
+
+        /**
+         * Set the value of ordenes
+         *
+         * @return  self
+         */ 
+        public function setOrdenes($ordenes)
+        {
+                $this->ordenes = $ordenes;
+
+                return $this;
+        }
+
+        /**
+         * Get the value of carrito
+         */ 
+        public function getCarrito()
+        {
+                return $this->carrito;
+        }
+
+        /**
+         * Set the value of carrito
+         *
+         * @return  self
+         */ 
+        public function setCarrito($carrito)
+        {
+                $this->carrito = $carrito;
+
+                return $this;
+        }
+    }
 
 ?>
